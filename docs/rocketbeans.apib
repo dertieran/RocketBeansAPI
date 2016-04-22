@@ -1,0 +1,32 @@
+FORMAT: 1A
+HOST: http://api.rocketmgmt.de
+
+# RocketBeans API
+The RocketBeans API provides information about [Rocket Beans TV](https://www.rocketbeans.tv/rb-tv/)
+
+## Authorization
+<!-- include(partial/authentication.md) -->
+
+# Data Structures
+
+## PodcastData
++ title: Wasser & IPhones (string) - The Podcast Title.
++ description: Folge 1 (string) - The Podcast Description.
++ length: 3568 (string) - The Podcast Length in Seconds.
++ url: http:\/\/cdn.rocketmgmt.de\/mp3\/almost_daily\/almostdaily_e001.mp3 (string) - The URL to the Podcast.
++ image: http:\/\/cdn.rocketmgmt.de\/images\/app\/almost_daily.jpg (string) - The URL to the Podcast Image.
++ filesize: 143 (string) - The Size of the Podcast in MB.
+
+## PodcastList
++ podcasts: (array[PodcastData])
+
+# Group Podcast
+
+## Podcast [/podcast]
+
+### Get podcast [GET]
+Get a list of podcasts.
+
++ Response 200 (text/html;charset=UTF-8)
+
+    + Attributes (PodcastList)

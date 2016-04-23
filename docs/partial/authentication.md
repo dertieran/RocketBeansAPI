@@ -1,4 +1,4 @@
-**The API uses the WSSE UsernameToken Algorithm**
+**The RocketBeans API uses the WSSE UsernameToken Algorithm**
 
 WSSE is a family of open security specifications for web services, specifically SOAP web services. However, the [UsernameToken](http://www.oasis-open.org/committees/wss/documents/WSS-Username-02-0223-merged.pdf) (PDF) algorithm is not SOAP-specific, it can be easily adapted to work within the HTTP authentication framework.
 
@@ -25,7 +25,6 @@ The RocketBeans API is at api.rocketmgmt.de, and has a `/podcast` endpoint. Bob 
 ```http
 GET /podcast HTTP/1.1
 Host: api.rocketmgmt.de
-Content-Type: application/json
 Authorization: WSSE profile="UsernameToken"
 X-WSSE: UsernameToken Username="bob", PasswordDigest="quR/EWLAV4xLf9Zqyw4pDmfV9OY=", Nonce="d36e316282959a9ed4c89851497a717f", Created="2003-12-15T14:43:07Z"
 ```

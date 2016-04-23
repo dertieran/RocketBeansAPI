@@ -1,0 +1,27 @@
+{
+  "name": "rocketbeans-api",
+  "version": "1.0.0",
+  "description": "Documentation of the RocketBeans API from the Community for the Community",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "render": "node ./scripts/render.js",
+    "watch": "node ./scripts/watch.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DerTieran/RocketBeansAPI.git"
+  },
+  "author": "Philipp Beck",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DerTieran/RocketBeansAPI/issues"
+  },
+  "homepage": "http://dertieran.github.io/RocketBeansAPI/",
+  "dependencies": {
+    "aglio": "^2.2.0",
+    "chokidar": "^1.4.3"
+  }
+}

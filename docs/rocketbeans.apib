@@ -9,28 +9,34 @@ The RocketBeans API provides information about [Rocket Beans TV](https://www.roc
 
 # Data Structures
 
-## PodcastData
+## Podcast
 + title: Wasser & IPhones (string) - The Podcast Title.
 + description: Folge 1 (string) - The Podcast Description.
 + length: 3568 (string) - The Podcast Length in Seconds.
 + url: http:\/\/cdn.rocketmgmt.de\/mp3\/almost_daily\/almostdaily_e001.mp3 (string) - The URL to the Podcast.
 + image: http:\/\/cdn.rocketmgmt.de\/images\/app\/almost_daily.jpg (string) - The URL to the Podcast Image.
 + filesize: 143 (string) - The Size of the Podcast in MB.
-## PodcastList
-+ podcasts: (array[PodcastData])
 
-## ScheduleData
-+ id: 37637 (number)
-+ title: Almost Daily #234 (string)
-+ topic: Sprichwoerter & Katastrophen (string)
+## PodcastList
++ podcasts: (array[Podcast])
+
+## Show
++ id: 37637 (number) - The Show ID.
++ title: Almost Daily #234 (string) - The Show Title
++ topic: Sprichwoerter & Katastrophen (string) - The Show Topic.
 + show: Almost Daily (string)
 + timeStart: `2016-04-24T20:15:00+02:00` (string)
 + timeEnd: `2016-04-24T21:16:01+02:00` (string)
 + length: 3661 (number)
 + type: premiere (string)
-+ game: (string)
-## ScheduleList
-+ schedule: (array[ScheduleData])
++ game: empty (string)
+
+## todaySchedule
++ schedule: (array[Show])
+
+## weekSchedule
++ schedule:
+  + 18.04.2016: (array[Show]) - Date of the Weekday
 
 # Group Podcasts
 
@@ -45,11 +51,29 @@ Get a list of podcasts.
 
 # Group Shows
 
-## Schedule [/schedule]
+## Todays Schedule [/schedule]
 
-### GET Shows [GET]
-Get a list of shows.
+### GET Todays Schedule [GET]
+Get the schedule of today.
 
 + Response 200 (text/html;charset=UTF-8)
 
-  + Attributes (ScheduleList)
+  + Attributes (todaySchedule)
+
+## Week Schedule [/schedule/weekdays]
+
+### GET Week Schedule [GET]
+Get the schedule of the current week.
+
++ Response 200 (text/html;charset=UTF-8)
+
+  + Attributes (weekSchedule)
+
+## Current Show [/schedule/current]
+
+### GET current Show [GET]
+Get the show that is currently running.
+
++ Response 200 (text/html;charset=UTF-8)
+
+  + Attributes (Show)

@@ -21,15 +21,15 @@ The RocketBeans API provides information about [Rocket Beans TV](https://www.roc
 + podcasts: (array[Podcast])
 
 ## Show
-+ id: 37637 (number) - The Show ID.
-+ title: Almost Daily #234 (string) - The Show Title
-+ topic: Sprichwoerter & Katastrophen (string) - The Show Topic.
-+ show: Almost Daily (string)
-+ timeStart: `2016-04-24T20:15:00+02:00` (string)
-+ timeEnd: `2016-04-24T21:16:01+02:00` (string)
-+ length: 3661 (number)
-+ type: premiere (string)
-+ game: empty (string)
++ id: 37663 (number) - The Show ID.
++ title: Knallhart Durchgenommen (string) - The Show Title
++ topic: Knallhart Durchgenommen: Dark Souls III (string) - The Show Topic.
++ show: Knallhart Durchgenommen (string) - The kind of the Show.
++ timeStart: `2016-04-22T22:00:00+02:00` (string) - The start time of the Show.
++ timeEnd: `2016-04-23T00:09:17+02:00` (string) - The end time of the Show.
++ length: 7757 (number) - The Show Length in Seconds.
++ type: premiere, live (enum) - The Show Type can be premiere, live or .
++ game: Dark Souls III (string)  - The Game played in the Show.
 
 ## todaySchedule
 + schedule: (array[Show])
@@ -49,7 +49,7 @@ Get a list of podcasts.
 
   + Attributes (PodcastList)
 
-# Group Shows
+# Group Schedule
 
 ## Todays Schedule [/schedule]
 

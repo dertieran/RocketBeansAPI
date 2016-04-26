@@ -31,7 +31,7 @@ The RocketBeans API provides information about [Rocket Beans TV](https://www.roc
 + type: premiere, live (enum) - The Show Type can be premiere, live or .
 + game: Dark Souls III (string)  - The Game played in the Show.
 
-## todaySchedule
+## scheduleList
 + schedule: (array[Show])
 
 ## weekSchedule
@@ -51,19 +51,34 @@ Get a list of podcasts.
 
 # Group Schedule
 
-## Todays Schedule [/schedule]
+## Schedule List [/schedule]
 
-### GET Todays Schedule [GET]
-Get the schedule of today.
+### GET Schedule List[GET]
+Get the schedule of the current week as one list.
 
 + Response 200 (text/html;charset=UTF-8)
 
-  + Attributes (todaySchedule)
+  + Attributes (scheduleList)
+
+## Schedule List [/schedule/next/{limit}]
+
+
+### GET Next X Shows [GET]
+Get the the next x Ssows starting from the current show.
+
++ Response 200 (text/html;charset=UTF-8)
+
++ Parameters
+
+  + limit: 5 (required, number) - number of shows you receive
+
++ Attributes (scheduleList)
+
 
 ## Week Schedule [/schedule/weekdays]
 
 ### GET Week Schedule [GET]
-Get the schedule of the current week.
+Get the schedule of the current week sorted by weekdays.
 
 + Response 200 (text/html;charset=UTF-8)
 

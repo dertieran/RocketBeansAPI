@@ -21,7 +21,7 @@
   },
   "homepage": "http://dertieran.github.io/RocketBeansAPI/",
   "dependencies": {
-    "aglio": "^2.2.0",
+    "aglio": "^2.3.0",
     "chokidar": "^1.4.3"
   }
 }
